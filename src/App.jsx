@@ -3,13 +3,16 @@ import Login from "./pages/login.jsx";
 function App() {
   return (
     <>
-      <header>
+    
+      <header className="bg-current py-12">
         <div>
-          <h1>Holaa</h1>
+          <h1 className="text-white">Holaa</h1>
         </div>
       </header>
-      <main>
+      <main >
+        
         <Login />
+        
       </main>
     </>
   );
