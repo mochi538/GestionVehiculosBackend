@@ -1,14 +1,27 @@
 import "./App.css";
-import Login from "./pages/Login.jsx";
+import InicioUsuario from "./pages/inicioUsuario.jsx";
+import InicioAdmin from "./pages/inicioAdmin.jsx";
+import LandingPage from "./pages/landingPage.jsx";
+import Register from "./pages/registro.jsx";
+import Login from "./pages/login.jsx";
+
+
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
 function App() {
   return (
     <>
-    
-      <main >
-        
-        <Login />
-        
-      </main>
+    <Router>
+      <Routes>
+      <Route path="/" element={<LandingPage />} />
+        <Route path="/registro" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/inicioUsuario" element={<InicioUsuario />} />
+        <Route path="/admin" element={<InicioAdmin />} />
+
+
+      </Routes>
+    </Router>
     </>
   );
 }
